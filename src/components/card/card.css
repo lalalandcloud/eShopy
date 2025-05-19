@@ -32,3 +32,13 @@
     height: 55%;
     overflow: hidden;
 }
+.limite{
+    background-color: orange;
+}
+.full{
+    background-color: rgb(169, 232, 255);
+}
+.out{
+    background-color: black;
+    color: white;
+}

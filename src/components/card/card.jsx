@@ -6,7 +6,7 @@ function Card({cardImg, name, price, stock, onBuy, argent}){
 
 
     return(
-        <div id='divGloCard'>
+        <div id='divGloCard' className={stock === 1 ? 'limite' : stock === 0 ? 'out': 'full'}>
             <div className='divCardImg'>
                 <img src={imgG} alt="" />
             </div>
