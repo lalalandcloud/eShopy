@@ -8,20 +8,17 @@ function Cart({argent, cb, remettre}){
 
     return(
         <div id='divGloCart'>
-            <div>
+            <div id='divH'>
                 <h2>Cart</h2>
                 <h3>Portefeuille : {argent}€</h3>
             </div>
             <div>
-                <div>
-                    {/* <img src="" alt="" /> */}
-                </div>
-                <div>
+                <div id='divFin'>
                     <h4>Panier:</h4>
                     <ul id='ulCard'>
                         {Object.entries(cb || {}).map(([name, qty]) => (
                             <li key={name}>
-                                {name} : {qty}
+                                {name} : <b>{qty}</b>
                                 <button className='show'
                                     onClick={() => remettre(name)}
                                     disabled={qty === 0}

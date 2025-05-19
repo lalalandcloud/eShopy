@@ -1,5 +1,7 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  margin: 30px;
+  background-image: url('./assets/img/fond1.jpg');
+  object-fit: contain;
 }

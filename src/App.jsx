@@ -4,6 +4,7 @@ import json from '../data.json'
 import { useState } from 'react'
 import Cart from './components/cart/cart'
 
+
 function App() {
   const [showDiv, setShowDiv] = useState(false)
   const [argent, setArgent] = useState(15)
@@ -85,7 +86,7 @@ function App() {
         ))}
       </div>
 
-      <div>
+      <div id='divAppCart'>
           <Cart
             argent={argent}
             cb={panier}

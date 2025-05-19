@@ -1,7 +1,7 @@
 import './card.css'
-import fleur1 from '../../assets/img/81705.jpg'
-import fleur2 from '../../assets/img/IMG_8714.jpg'
-import fleur3 from '../../assets/img/20210128052736_file_60124b48b207d_60124c20af9fd..avif'
+import fleur1 from '../../assets/img/5._Bouquet_d_exception_-_Printemps_-_Colore_-_Passion_1024x1024.jpg'
+import fleur2 from '../../assets/img/8401-xl@2x.jpg'
+import fleur3 from '../../assets/img/meadow.jpg'
 
 
 function Card({cardImg, name, price, stock, onBuy, argent}){
@@ -13,7 +13,7 @@ function Card({cardImg, name, price, stock, onBuy, argent}){
 
     return(
         <div id='divGloCard' className={stock === 1 ? 'limite' : stock === 0 ? 'out': 'full'}>
-            <div className='divCardImg'>
+            <div id='divCardImg'>
                 <img src={images[name]} alt="" />
             </div>
             <div id='divCardInfos'>
