@@ -1,6 +1,6 @@
 import './cart.css'
 
-function Cart({argent, nom, cb}){
+function Cart({argent, name, cb}){
     return(
         <div id='divGloCart'>
             <div>
@@ -12,7 +12,7 @@ function Cart({argent, nom, cb}){
                     {/* <img src="" alt="" /> */}
                 </div>
                 <div>
-                    <h6>{nom} : {cb}</h6>
+                    <h6>{name} : {cb}</h6>
                 </div>
             </div>
         </div>
