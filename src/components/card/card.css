@@ -1,7 +1,6 @@
 #divGloCard{
     width: 30vw;
     height: 60vh;
-    border: solid blue 3px;
     box-sizing: border-box;
 }
 .divCardName>h3{
@@ -27,18 +26,35 @@
 }
 .divCardImg>img{
     width: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
 }
 .divCardImg{
     height: 55%;
     overflow: hidden;
 }
 .limite{
-    background-color: orange;
+    border: rgba(255, 166, 0, 0.557) 2px solid;
+    background-image: url("../../assets/img/tissu-coton-imprime-liberty-rose-et-jaune.jpg");
+    opacity: 0.7;
+    background-size: contain;
+
+}
+.limite:hover{
+    opacity: 1;
+    
 }
 .full{
-    background-color: rgb(169, 232, 255);
+    background-image: url("../../assets/img/tissu-coton-imprime-liberty-rose-et-jaune.jpg");
+    background-size: contain;
+    opacity: 0.7;
+}
+.full:hover{
+    opacity: 1;
 }
 .out{
-    background-color: black;
+    background-size: contain;
+    background-image: url("../../assets/img/tissu-coton-imprime-liberty-rose-et-jaune.jpg");
     color: white;
+    opacity: 0.5;
 }
