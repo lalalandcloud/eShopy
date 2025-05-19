@@ -17,9 +17,9 @@ function App() {
     "prod3" : 0
   })
 
-  if (panier > 0){
-    setShowDiv === true
-  }
+  // if (panier > 0){
+  //   setShowDiv === true
+  // }
 
   const rendre = (name) => {
     const index = json.findIndex(item => item.name === name)
@@ -90,7 +90,7 @@ function App() {
             argent={argent}
             cb={panier}
             remettre={rendre}
-            show={showDiv}
+            // show={showDiv}
           />
       </div>
 

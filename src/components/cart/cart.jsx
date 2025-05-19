@@ -1,8 +1,10 @@
 import './cart.css'
 
-function Cart({argent, cb, remettre, show}){
-    if (!show) return null
-    
+function Cart({argent, cb, remettre}){
+    // if (!show) return null
+    if (!cb || Object.values(cb).every(qty => qty === 0)){
+        return null
+    }
 
     return(
         <div id='divGloCart'>
@@ -20,7 +22,7 @@ function Cart({argent, cb, remettre, show}){
                         {Object.entries(cb || {}).map(([name, qty]) => (
                             <li key={name}>
                                 {name} : {qty}
-                                <button 
+                                <button className='show'
                                     onClick={() => remettre(name)}
                                     disabled={qty === 0}
                                 >
