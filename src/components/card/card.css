@@ -1,0 +1,19 @@
+#divGloCard{
+    width: 30vw;
+    height: 60vh;
+    border: solid blue 3px;
+    box-sizing: border-box;
+}
+.divCardName>h3{
+    margin: 0;
+}
+.divCardPrice>p{
+    margin: 0;
+}
+.divCardStock>p{
+    margin: 0;
+}
+
+.divCardImg>img{
+    width: 100%;
+}
