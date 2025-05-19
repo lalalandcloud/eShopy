@@ -1,7 +1,9 @@
 import './cart.css'
 
-function Cart({argent, cb}){
-    console.log("Contenu du panier:", cb);
+function Cart({argent, cb, remettre, show}){
+    if (!show) return null
+    
+
     return(
         <div id='divGloCart'>
             <div>
@@ -13,12 +15,17 @@ function Cart({argent, cb}){
                     {/* <img src="" alt="" /> */}
                 </div>
                 <div>
-                    <h4>produits achetés :</h4>
-                    <ul>
+                    <h4>Panier:</h4>
+                    <ul id='ulCard'>
                         {Object.entries(cb || {}).map(([name, qty]) => (
                             <li key={name}>
                                 {name} : {qty}
-                                <button>rendre</button>
+                                <button 
+                                    onClick={() => remettre(name)}
+                                    disabled={qty === 0}
+                                >
+                                    rendre
+                                </button>
                             </li>
                         ))}
                     </ul>

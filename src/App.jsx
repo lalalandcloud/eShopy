@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Cart from './components/cart/cart'
 
 function App() {
+  const [showDiv, setShowDiv] = useState(false)
   const [argent, setArgent] = useState(15)
   const [cart, setCart] = useState ([])
   const [select, setSelect] = useState(null)
@@ -14,12 +15,28 @@ function App() {
     "prod1" : 0,
     "prod2" : 0,
     "prod3" : 0
-})
+  })
 
-  const rendre = (index) => {
-    
+  if (panier > 0){
+    setShowDiv === true
   }
 
+  const rendre = (name) => {
+    const index = json.findIndex(item => item.name === name)
+    if (index === -1) return;
+    const price = parseFloat(json[index].price.trim());
+
+    setStockList(prev =>{
+      const nNewStock = [...prev]
+      nNewStock[index] +=1
+      return nNewStock
+    });
+    setArgent(prev => prev + price)
+    setPanier(prev => ({
+      ...prev,
+      [name] : Math.max(0, prev[name] -1)
+    }));
+  }
   
   const handleBuy = (index) => {
     const price = parseFloat(json[index].price.trim());
@@ -72,7 +89,8 @@ function App() {
           <Cart
             argent={argent}
             cb={panier}
-            name={nomProduit}
+            remettre={rendre}
+            show={showDiv}
           />
       </div>
 
