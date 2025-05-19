@@ -2,6 +2,7 @@ import './App.css'
 import Card from './components/card/card'
 import json from '../data.json'
 import { useState } from 'react'
+import Cart from './components/cart/cart'
 
 function App() {
   const [argent, setArgent] = useState(15)
@@ -12,14 +13,18 @@ function App() {
   )
 
   const handleBuy = (index) => {
-    setStockList(prev => {
-      const newStock = [...prev];
-      if(newStock[index] > 0){
+    const price = parseFloat(json[index].price.trim());
+
+    if (stockList[index] > 0 && argent >= price){
+      setStockList(prev => {
+        const newStock = [...prev];
         newStock[index] -=1;
-      }
-      return newStock
-    })
-  }
+        return newStock
+      });
+      setArgent(prev => prev - price)
+  
+    }
+  };
 
   // const incrementation = () => {
   //   if (stock > 0 && argent > price){
@@ -47,12 +52,21 @@ function App() {
             price = {item.price}
             stock = {stockList[index]}
             onBuy={() => handleBuy(index)}
+            argent={argent}
             />
 
 
 
         ))}
 
+      </div>
+      <div>
+        <Cart
+          // key={index}
+          argent={argent}
+          // nom={}
+          // cb={}
+        />
       </div>
         
     </>
