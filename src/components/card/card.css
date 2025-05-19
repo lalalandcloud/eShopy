@@ -1,0 +1,85 @@
+#divGloCard{
+    width: 25vw;
+    height: 50vh;
+    box-sizing: border-box;
+    transition: ease-in-out 300ms;
+    /* background: linear-gradient(#fff 10% , #ffffff00); */
+    cursor: pointer;
+    background-image: url("../../assets/img/libertyWhite.jpg");
+    background-size: contain;
+    border-radius: 5px;
+    min-height: 250px;
+}
+#divGloCard:hover{
+    scale: 1.2;
+    box-shadow: 0px 0px 6px 0px black ;
+}
+
+.divCardName>h3{
+    margin: 0;
+    grid-row: 1;
+}
+.divCardPrice>p{
+    margin: 0;
+}
+.divCardStock>p{
+    margin: 0;
+}
+.divCardStock{
+    grid-row: 2;
+}
+.divCardPrice{
+    grid-row: 2;
+}
+
+#divCardInfos{
+    box-sizing: border-box;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 25%;
+    padding-left: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    
+}
+#divCardBtn{
+    justify-self: center;
+    cursor: pointer;
+    bottom: 0px;
+
+}
+#divCardImg>img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+#divCardBtn>button{
+    border: 2px rgba(255, 218, 218, 0.562) solid;
+    background-color: rgba(255, 218, 218, 0.276);
+    padding: 7px;
+    margin: 0;
+    border-radius: 5px;
+    transition: ease-in-out 300ms;
+}
+#divCardBtn>button:hover{
+    scale: 1.1;
+    border: 2px rgba(255, 218, 218, 0.868) solid;
+    background-color: rgba(255, 218, 218, 0.678);
+}
+#divCardBtn>button:active{
+    border: 2px rgb(255, 218, 218) solid;
+    background-color: rgb(255, 218, 218);
+
+}
+#divCardImg{
+    height: 55%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.limite{
+    /* border: 9px rgba(255, 218, 218, 0.874) solid; */
+    background-color: rgb(255, 218, 218);
+}

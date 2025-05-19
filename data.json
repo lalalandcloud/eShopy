@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "prod1" ,
+        "price" : " 1" ,
+        "stock" : "4" 
+    },
+    {
+        "name" : "prod2" ,
+        "price" : "1.5" ,
+        "stock" : "5" 
+    },
+    {
+        "name" : "prod3" ,
+        "price" : "2" ,
+        "stock" : "4" 
+    }
+]
