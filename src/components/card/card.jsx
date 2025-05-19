@@ -28,7 +28,6 @@ function Card({cardImg, name, price, stock, onBuy, argent}){
             </div>
         </div>
     )
-
 }
 
 export default Card;

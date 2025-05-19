@@ -9,8 +9,18 @@ function App() {
   const [cart, setCart] = useState ([])
   const [select, setSelect] = useState(null)
   const [stockList, setStockList] = useState(json.map (item => Number(item.stock)))
-  const [panier, setPanier] = useState(0)
+  const [nomProduit, setNomProduit] = useState(json.map (item => (item.name)))
+  const [panier, setPanier] = useState({
+    "prod1" : 0,
+    "prod2" : 0,
+    "prod3" : 0
+})
 
+  const rendre = (index) => {
+    
+  }
+
+  
   const handleBuy = (index) => {
     const price = parseFloat(json[index].price.trim());
 
@@ -21,9 +31,12 @@ function App() {
         return newStock
       });
       setArgent(prev => prev - price)
-      setPanier(prev => prev + 1)
+      setPanier(prev => ({
+        ...prev,
+        [json[index].name] : prev[json[index].name] +1
+      }))
     }
-  };
+  }
 
   // const incrementation = () => {
   //   if (stock > 0 && argent > price){
@@ -41,7 +54,6 @@ function App() {
 
   return (
     <>
-
       <div id='divAppCards'>
         {json.map((item, index) => (
             <Card
@@ -57,15 +69,11 @@ function App() {
       </div>
 
       <div>
-        {json.map((item, index) =>(
-
           <Cart
-            key={index}
             argent={argent}
-            name={item.name}
-            cb={item.panier}
+            cb={panier}
+            name={nomProduit}
           />
-        ))}
       </div>
 
     </>

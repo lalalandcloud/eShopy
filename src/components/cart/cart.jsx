@@ -1,18 +1,27 @@
 import './cart.css'
 
-function Cart({argent, name, cb}){
+function Cart({argent, cb}){
+    console.log("Contenu du panier:", cb);
     return(
         <div id='divGloCart'>
             <div>
                 <h2>Cart</h2>
-                <h3>Portefeuille : {argent}</h3>
+                <h3>Portefeuille : {argent}€</h3>
             </div>
             <div>
                 <div>
                     {/* <img src="" alt="" /> */}
                 </div>
                 <div>
-                    <h6>{name} : {cb}</h6>
+                    <h4>produits achetés :</h4>
+                    <ul>
+                        {Object.entries(cb || {}).map(([name, qty]) => (
+                            <li key={name}>
+                                {name} : {qty}
+                                <button>rendre</button>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>
