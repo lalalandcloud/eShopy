@@ -14,6 +14,21 @@
     margin: 0;
 }
 
+#divCardInfos{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 35%;
+    padding-left: 10px;
+}
+#divCardBtn{
+    justify-self: center;
+}
 .divCardImg>img{
     width: 100%;
+}
+.divCardImg{
+    height: 55%;
+    overflow: hidden;
 }

@@ -1,7 +1,7 @@
 import './card.css'
 import glace from '../../assets/img/glace.jpg'
 
-function Card({cardImg, name, price, stock}){
+function Card({cardImg, name, price, stock, onBuy}){
     const imgG = glace
 
 
@@ -21,8 +21,10 @@ function Card({cardImg, name, price, stock}){
                     <p>Stock: {stock} pcs </p>
                 </div>
             </div>
-            <div>
-                <button>Acheter</button>
+            <div id='divCardBtn'>
+                <button onClick={onBuy} disabled={stock === 0}>
+                    {stock> 0 ? 'Acheter' : 'Article non disponible'}
+                </button>
             </div>
         </div>
     )
