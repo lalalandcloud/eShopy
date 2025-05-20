@@ -26,6 +26,15 @@ ul{
 li{
     list-style: none;
 }
+li>div>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+}
+li>div{
+    width: 100px;
+    height: 100px;
+}
 #divH{
     display: flex;
     align-items: center;
