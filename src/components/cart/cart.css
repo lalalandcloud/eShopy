@@ -66,3 +66,23 @@ li>div:nth-of-type(2){
 #divFin>ul{
     grid-row: 1;
 }
+
+@media (max-width: 800px){
+    #ulCard{
+        grid-row: 2 !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    li>div:nth-of-type(2){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #ulCard>li{
+        margin: 8px;
+        width: 20rem;
+    }
+
+}
