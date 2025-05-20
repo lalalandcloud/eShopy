@@ -1,16 +1,16 @@
 [
     {
-        "name" : "prod1" ,
+        "name" : "Bouquet Champêtre" ,
         "price" : " 1" ,
         "stock" : "4" 
     },
     {
-        "name" : "prod2" ,
+        "name" : "Bouquet de Luxe" ,
         "price" : "1.5" ,
         "stock" : "5" 
     },
     {
-        "name" : "prod3" ,
+        "name" : "Bouquet de Mariée" ,
         "price" : "2" ,
         "stock" : "4" 
     }

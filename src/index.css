@@ -1,7 +1,30 @@
+
+.open-sans- {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 body {
   margin: 0;
   display: flex;
   margin: 30px;
-  background-image: url('./assets/img/fond1.jpg');
-  object-fit: contain;
+  background-image: url('./assets/img/mosaic2.jpg');
+  z-index: 0;
+  font-family: "Open Sans", sans-serif;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/img/mosaic2.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Applique le flou uniquement à l'image de fond */
+  z-index: -1; /* Place le pseudo-élément derrière le contenu */
 }

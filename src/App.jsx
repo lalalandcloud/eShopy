@@ -12,10 +12,12 @@ function App() {
   const [select, setSelect] = useState(null)
   const [stockList, setStockList] = useState(json.map (item => Number(item.stock)))
   const [nomProduit, setNomProduit] = useState(json.map (item => (item.name)))
-  const [panier, setPanier] = useState({
-    "prod1" : 0,
-    "prod2" : 0,
-    "prod3" : 0
+  const [panier, setPanier] = useState(() => {
+    const initial ={}
+    json.forEach(item=> {
+      initial[item.name] = 0
+    })
+    return initial
   })
 
   // if (panier > 0){

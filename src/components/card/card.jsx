@@ -5,10 +5,10 @@ import fleur3 from '../../assets/img/meadow.jpg'
 
 
 function Card({cardImg, name, price, stock, onBuy, argent}){
-    const images = { 
-        prod1: fleur1,
-        prod2: fleur2,
-        prod3: fleur3
+    const images = {      
+        "Bouquet Champêtre": fleur1,
+        "Bouquet de Luxe": fleur2,
+        "Bouquet de Mariée": fleur3
     }    
 
     return(
