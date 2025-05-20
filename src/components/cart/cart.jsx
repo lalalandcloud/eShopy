@@ -31,13 +31,16 @@ function Cart({argent, cb, remettre}){
                                 <div>
                                     <img src={image[name]} alt="" />
                                 </div>
-                                {name} : <b>{qty}</b>
-                                <button
-                                    onClick={() => remettre(name)}
-                                    disabled={qty === 0}
-                                >
-                                    rendre
-                                </button>
+                                <div>
+                                    {name} : <b>{qty}</b>
+                                    <button
+                                        onClick={() => remettre(name)}
+                                        disabled={qty === 0}
+                                    >
+                                        rendre
+                                    </button>
+                                </div>
+
                             </li>
                         ))}
                     </ul>

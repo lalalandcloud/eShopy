@@ -25,31 +25,43 @@ ul{
 }
 li{
     list-style: none;
+    display: grid;
+    justify-self: center;
 }
 li>div>img{
     width: 100%;
     height: 100%;
     border-radius: 25%;
 }
-li>div{
+li>div:first-of-type{
     width: 100px;
     height: 100px;
+    grid-row: 1;
+}
+li>div:nth-of-type(2){
+    width: 70%;
+    grid-row: 1;
+    padding: 10px;
 }
 #divH{
-    display: flex;
+    display: grid;
     align-items: center;
-    width: 99%;
 }
 #divH>h3{
+    grid-column: 2;
     text-align: center;
+}
+#divH>h2{
+    text-align: center;
+
 }
 #divFin{
     display: grid;
     align-items: center;
 }
 #divFin>h4{
+    text-align: center;
     grid-row: 1;
-    width: 25%;
 }
 #divFin>ul{
     grid-row: 1;
