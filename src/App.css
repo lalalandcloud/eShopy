@@ -21,3 +21,9 @@
   padding: 12px;
   border-radius: 5px
 }
+
+@media (max-width: 800px){
+  #divAppCards{
+    display: grid;
+  }
+}

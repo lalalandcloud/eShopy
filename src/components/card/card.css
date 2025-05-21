@@ -90,8 +90,25 @@
         scale: 0.8;
         padding: 0;
         margin: 0;
+        grid-row: 1;
+        height: auto;
     }
     #divCardImg>img{
         height: 100%;
+    }
+    #divCardImg{
+        grid-row: 1;
+        align-self: center;
+    }
+    #divGloCard{
+        display: grid;
+        min-height: auto;
+        width: 100%;
+        padding: 7px;
+        margin: 5px;
+    }
+    #divCardBtn{
+        grid-row: 1;
+        align-self: center;
     }
 }
